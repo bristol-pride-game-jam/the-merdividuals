@@ -16,9 +16,9 @@ Beware! Presenting as anything other than yourself is bad for your mental health
 
 * There is a “dysphoria meter” that, by default, sits at 0%.
 * PC can change their state at will.
-** Neutral state — PC presents agender (default)
-** Female state — PC presents female 
-** Male state — PC presents male
+  * Neutral state — PC presents agender (default)
+  * Female state — PC presents female 
+  * Male state — PC presents male
 * Appearing in female/male state rapidly increases the dysphoria meter (hitting 100% in ≈2 seconds). 
 * Appearing in neutral state gradually decreases dysphoria meter (hitting 0% in about ≈8 seconds). 
 * If the dysphoria meter hits 100%, the player is penalised (slowed?) and forced back into neutral mode for *n* seconds. 
