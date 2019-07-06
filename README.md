@@ -1,9 +1,24 @@
 # Project Merdividuals
 
+Made over a couple of days by these fine merdividuals: 
+
+Art and animation: Claudia
+
+Art and animation: Bruce\
+[@bruceonlybruce](https://twitter.com/bruceonlybruce)\
+https://undevelopedbruce.com
+
+Sprite and design help: Loz :D 
+
+Code: Ripp_ ([chao-master](https://github.com/chao-master)) & Kit ([gigosaurus](https://github.com/gigosaurus))
+
+Project management: Kim\
+http://berly.kim
+
 ## Player character (PC)
 
-Name: Peppermint
-Species: Merdividual 
+Name: Peppermint\
+Species: Merdividual\
 Gender: Agender
 
 ## Game overview
