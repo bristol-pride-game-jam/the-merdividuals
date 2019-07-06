@@ -19,8 +19,8 @@ func _ready():
 		$Sprite.texture = sprite
 
 func _on_Area2D_body_entered(body):
-	if !(body is Player):
-		return
+	#if !(body is Player):
+	#	return
 	world.clearWall(removes);
 	world.color = color;
 	
