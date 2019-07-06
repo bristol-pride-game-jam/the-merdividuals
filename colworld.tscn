@@ -44,7 +44,7 @@ current = true
 zoom = Vector2( 0.5, 0.5 )
 
 [node name="Bowler" parent="." instance=ExtResource( 5 )]
-position = Vector2( 85.5, 316.5 )
+position = Vector2( 33, 54.0001 )
 gravity_vec = Vector2( 0, 0 )
 color = Color( 0.0745098, 0.160784, 0.721569, 1 )
 removes = "MaleWalls"

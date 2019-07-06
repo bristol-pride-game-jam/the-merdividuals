@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Area2D.gd" type="Script" id=1]
 [ext_resource path="res://hat_bowler.png" type="Texture" id=2]
+[ext_resource path="res://merd_hat.png" type="Texture" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 12.0
@@ -10,6 +11,7 @@ radius = 12.0
 script = ExtResource( 1 )
 color = Color( 1, 0.75, 0.8, 1 )
 sprite = ExtResource( 2 )
+character_sprite = ExtResource( 3 )
 removes = ""
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

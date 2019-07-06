@@ -7,7 +7,8 @@ extends Area2D
 
 onready var world = get_node("..");
 export var color:Color = ColorN("pink");
-export var sprite:Texture setget set_sprite
+export var sprite:Texture setget set_sprite;
+export var character_sprite:Texture;
 export var removes:String;
 
 func set_sprite(value):
@@ -16,11 +17,12 @@ func set_sprite(value):
 		$Sprite.texture=value
 		
 func _ready():
-		$Sprite.texture = sprite
+	$Sprite.texture = sprite
 
 func _on_Area2D_body_entered(body):
-	#if !(body is Player):
-	#	return
+	if !(body is Player):
+		return
 	world.clearWall(removes);
 	world.color = color;
+	body.sheet = character_sprite;
 	
