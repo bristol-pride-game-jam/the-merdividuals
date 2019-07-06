@@ -6,7 +6,6 @@ extends KinematicBody2D
 # Member variables
 const MOTION_SPEED = 160 # Pixels/second
 
-
 func _physics_process(delta):
 	var motion = Vector2()
 	
