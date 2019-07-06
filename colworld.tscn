@@ -43,13 +43,14 @@ position = Vector2( 107.243, 219.134 )
 rotating = true
 current = true
 
-[node name="Hat" parent="." instance=ExtResource( 5 )]
-position = Vector2( 100.5, 328.5 )
+[node name="Bowler" parent="." instance=ExtResource( 5 )]
+position = Vector2( 85.5, 316.5 )
+gravity_vec = Vector2( 0, 0 )
 color = Color( 0.0745098, 0.160784, 0.721569, 1 )
 removes = "MaleWalls"
 
-[node name="Area2D" parent="." instance=ExtResource( 5 )]
-position = Vector2( 355.5, 102 )
+[node name="CatEars" parent="." instance=ExtResource( 5 )]
+position = Vector2( 372, 160.5 )
 color = Color( 0.870588, 0.282353, 0.87451, 1 )
 sprite = ExtResource( 6 )
 removes = "FemaleWalls"

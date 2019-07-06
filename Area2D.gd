@@ -1,3 +1,4 @@
+tool
 extends Area2D
 
 # Declare member variables here. Examples:
@@ -11,7 +12,7 @@ export var removes:String;
 
 func set_sprite(value):
 	sprite = value
-	if($Sprite):
+	if($Sprite or Engine.editor_hint):
 		$Sprite.texture=value
 		
 func _ready():
