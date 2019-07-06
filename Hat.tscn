@@ -20,4 +20,5 @@ shape = SubResource( 1 )
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0.333336, 0.592594 )
 texture = ExtResource( 2 )
-[connection signal="body_entered" from="." to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="." to="." method="_on_Hat_body_entered" flags=3]
+[connection signal="body_exited" from="." to="." method="_on_Hat_body_exited"]

@@ -8,6 +8,9 @@ var hat;
 
 #Pass through setter to the sheet below
 export var sheet:Texture setget set_sheet
+
+onready var origSheet = sheet;
+	
 func set_sheet(value):
 	sheet=value
 	if $sprite or Engine.editor_hint:
@@ -31,4 +34,12 @@ func _physics_process(delta):
 	motion = motion.normalized() * MOTION_SPEED
 	move_and_slide(motion)
 	
-	
+	if hat != null && Input.is_action_just_pressed("hat_off"):
+		get_parent().add_child(hat)
+		hat.position = position;
+		hat.visible = true
+		hat.collision_layer = 1
+		hat.dropped = true;
+		hat._ready();
+		hat=null;
+		set_sheet(origSheet)
