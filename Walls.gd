@@ -1,5 +1,7 @@
 extends TileMap
 
+class_name togglable_wall
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

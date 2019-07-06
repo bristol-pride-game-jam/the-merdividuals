@@ -8,9 +8,20 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "Player",
+"language": "GDScript",
+"path": "res://player.gd"
+}, {
+"base": "TileMap",
+"class": "togglable_wall",
+"language": "GDScript",
+"path": "res://Walls.gd"
+} ]
 _global_script_class_icons={
-
+"Player": "",
+"togglable_wall": ""
 }
 
 [application]

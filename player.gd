@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+class_name Player
+
 # This is a demo showing how KinematicBody2D
 # move_and_slide works.
 

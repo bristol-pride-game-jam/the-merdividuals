@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://colworld.gd" type="Script" id=1]
 [ext_resource path="res://TileSet.tres" type="TileSet" id=2]
 [ext_resource path="res://Walls.gd" type="Script" id=3]
 [ext_resource path="res://player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Hat.tscn" type="PackedScene" id=5]
+[ext_resource path="res://hat_cat_ears.png" type="Texture" id=6]
 
 [node name="colworld" type="Node2D"]
 show_behind_parent = true
@@ -22,7 +24,7 @@ modulate = Color( 0.0431373, 0.101961, 0.698039, 1 )
 tile_set = ExtResource( 2 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 655362, 0, 0, 655363, 0, 0, 655364, 0, 0, 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 0, 0, 655369, 0, 0 )
+tile_data = PoolIntArray( 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 655362, 0, 0, 655363, 0, 0, 655364, 0, 0, 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 0, 0, 655369, 0, 0, 1441811, 0, 0, 1441812, 0, 0, 1507347, 0, 0, 1507348, 0, 0, 1638419, 0, 0, 1703955, 0, 0, 1769491, 0, 0, 1900563, 0, 0, 1900564, 0, 0 )
 script = ExtResource( 3 )
 
 [node name="FemaleWalls" type="TileMap" parent="."]
@@ -40,3 +42,14 @@ position = Vector2( 107.243, 219.134 )
 [node name="Camera2D" type="Camera2D" parent="player"]
 rotating = true
 current = true
+
+[node name="Hat" parent="." instance=ExtResource( 5 )]
+position = Vector2( 100.5, 328.5 )
+color = Color( 0.0745098, 0.160784, 0.721569, 1 )
+removes = "MaleWalls"
+
+[node name="Area2D" parent="." instance=ExtResource( 5 )]
+position = Vector2( 355.5, 102 )
+color = Color( 0.870588, 0.282353, 0.87451, 1 )
+sprite = ExtResource( 6 )
+removes = "FemaleWalls"
