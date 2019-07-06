@@ -24,15 +24,14 @@ func _ready():
 	self.connect("body_entered",self,"_on_Area2D_body_entered")
 
 func _on_Area2D_body_entered(body):
-	if dropped or !(body is Player):
+	if dropped or !(body is Player) or body.hat != null:
 		return
-	print("hits");
-	world.clearWall(removes);
-	world.color = color;
-	body.sheet = character_sprite;
+	world.clearWall(removes)
+	world.color = color
+	body.sheet = character_sprite
 	body.hat = self
 	self.visible = false
-	self.collision_layer = 0
+	self.collision_mask = 0
 	
 
 func _on_Hat_body_exited(body):

@@ -38,7 +38,7 @@ func _physics_process(delta):
 		get_parent().add_child(hat)
 		hat.position = position;
 		hat.visible = true
-		hat.collision_layer = 1
+		hat.collision_mask = 1
 		hat.dropped = true;
 		hat._ready();
 		hat=null;
