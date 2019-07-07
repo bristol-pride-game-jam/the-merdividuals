@@ -26,5 +26,5 @@ func _input(event):
 		event.pressed and
 		not event.echo and
 		event.scancode == KEY_SPACE):
-			clearWall()
+			clearWall(["AgenderWalls"])
 			set_color(default_color)

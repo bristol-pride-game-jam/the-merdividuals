@@ -1,8 +1,7 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://player.gd" type="Script" id=1]
 [ext_resource path="res://merd.png" type="Texture" id=2]
-[ext_resource path="res://sprite.gd" type="Script" id=3]
 
 [sub_resource type="Animation" id=3]
 resource_name = "idle"
@@ -105,10 +104,10 @@ texture = ExtResource( 2 )
 offset = Vector2( 0, -4 )
 vframes = 4
 hframes = 4
-frame = 7
-script = ExtResource( 3 )
+frame = 8
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="sprite"]
+autoplay = "idle"
 anims/idle = SubResource( 3 )
 anims/idle_rare = SubResource( 4 )
 anims/left = SubResource( 5 )
