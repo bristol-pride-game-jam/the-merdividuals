@@ -5,10 +5,6 @@ extends CanvasLayer
 # var a = 2
 # var b = "text"
 
-var active
-
-onready var player = get_node("/root/colworld/player");
-
 func show(text:String, texture:Texture):
 	$Node2D/BubbleText.text = text;
 	$Node2D/Sprite.texture = texture;

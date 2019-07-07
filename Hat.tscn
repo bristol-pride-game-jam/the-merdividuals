@@ -14,6 +14,7 @@ color = Color( 1, 0.75, 0.8, 1 )
 sprite = ExtResource( 2 )
 character_sprite = ExtResource( 3 )
 removes = PoolStringArray(  )
+firstText = ""
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )

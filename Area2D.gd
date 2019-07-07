@@ -18,15 +18,15 @@ var first = true;
 
 func set_sprite(value):
 	sprite = value
-	if($Sprite or Engine.editor_hint):
+	if has_node("Sprite"):
 		$Sprite.texture=value
 		
 func _ready():
 	print("hat ready",self);
 	$Sprite.texture = sprite
-	self.connect("body_entered",self,"_on_Area2D_body_entered")
+	#self.connect("body_entered",self,"_on_Area2D_body_entered")
 
-func _on_Area2D_body_entered(body):
+func _on_Hat_body_entered(body):
 	if dropped or !(body is Player) or body.hat != null:
 		return
 	world.clearWall(removes)

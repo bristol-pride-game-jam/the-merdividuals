@@ -16,7 +16,7 @@ onready var origSheet = sheet;
 	
 func set_sheet(value):
 	sheet=value
-	if $sprite or Engine.editor_hint:
+	if has_node("sprite"):
 		$sprite.texture = value
 
 # Member variables
