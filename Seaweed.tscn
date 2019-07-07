@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://seaweed.png" type="Texture" id=1]
-[ext_resource path="res://sprite.gd" type="Script" id=2]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Swead"
@@ -25,7 +24,7 @@ tracks/0/keys = {
 texture = ExtResource( 1 )
 hframes = 4
 frame = 2
-script = ExtResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Swead"
 anims/Swead = SubResource( 1 )

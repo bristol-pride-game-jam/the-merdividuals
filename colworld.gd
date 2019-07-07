@@ -1,6 +1,6 @@
 extends Node2D
 
-var default_color = ColorN("gray")
+var default_color = Color(179, 250, 1)
 
 # Controls the background colour for the level
 export var color:Color = default_color setget set_color

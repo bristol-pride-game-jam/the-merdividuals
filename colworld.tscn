@@ -39,7 +39,7 @@ __meta__ = {
 tile_set = ExtResource( 2 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( -524267, 10, 0, -524266, 11, 0, -524265, 12, 0, -524264, 10, 0, -524263, 11, 0, -524262, 11, 0, -524261, 10, 0, 5, 10, 0, 6, 11, 0, 7, 12, 0, 8, 10, 0, 9, 11, 0, 10, 10, 0, 11, 10, 0, 983029, 10, 0, 983030, 10, 0, 1048565, 10, 0, 1048566, 10, 0, 1114101, 10, 0, 1114102, 10, 0, 1179637, 10, 0, 1179638, 10, 0 )
+tile_data = PoolIntArray( -524267, 10, 0, -524266, 11, 0, -524265, 12, 0, -524264, 10, 0, -524263, 11, 0, -524262, 11, 0, -524261, 10, 0, 5, 10, 0, 6, 11, 0, 7, 12, 0, 8, 10, 0, 9, 11, 0, 10, 10, 0, 11, 10, 0 )
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_lock_": true
@@ -65,12 +65,12 @@ __meta__ = {
 [node name="Bowler" parent="." instance=ExtResource( 5 )]
 position = Vector2( 103.13, 77.3474 )
 gravity_vec = Vector2( 0, 0 )
-color = Color( 0.0745098, 0.160784, 0.721569, 1 )
+color = Color( 0.568627, 0.666667, 1, 1 )
 removes = PoolStringArray( "MaleWalls" )
 
 [node name="CatEars" parent="." instance=ExtResource( 5 )]
 position = Vector2( 230.814, -81.0306 )
-color = Color( 0.870588, 0.282353, 0.87451, 1 )
+color = Color( 1, 0.454902, 0.698039, 1 )
 sprite = ExtResource( 6 )
 character_sprite = ExtResource( 7 )
 removes = PoolStringArray( "FemaleWalls" )
