@@ -27,7 +27,14 @@ _global_script_class_icons={
 [application]
 
 config/name="Merdividuals"
-run/main_scene="res://colworld.tscn"
+run/main_scene="res://Start.tscn"
+
+[display]
+
+window/size/width=960
+window/size/height=720
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
 
 [gdnative]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://colworld.gd" type="Script" id=1]
 [ext_resource path="res://TileSet.tres" type="TileSet" id=2]
@@ -8,7 +8,26 @@
 [ext_resource path="res://Hat.tscn" type="PackedScene" id=6]
 [ext_resource path="res://hat_cat_ears.png" type="Texture" id=7]
 [ext_resource path="res://merd_ears.png" type="Texture" id=8]
-[ext_resource path="res://Merdividual.wav" type="AudioStream" id=9]
+[ext_resource path="res://merdividual_bowler_anim.png" type="Texture" id=9]
+[ext_resource path="res://spech.png" type="Texture" id=10]
+[ext_resource path="res://Font.tres" type="DynamicFont" id=11]
+[ext_resource path="res://Merdividual.wav" type="AudioStream" id=12]
+
+[sub_resource type="Animation" id=1]
+resource_name = "New Anim"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 5 ]
+}
 
 [node name="colworld" type="Node2D"]
 show_behind_parent = true
@@ -44,7 +63,7 @@ __meta__ = {
 }
 
 [node name="player" parent="." instance=ExtResource( 5 )]
-position = Vector2( -51.2095, -71.7074 )
+position = Vector2( 216, 180 )
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 rotating = true
@@ -62,6 +81,7 @@ removes = PoolStringArray( "MaleWalls" )
 
 [node name="CatEars" parent="." instance=ExtResource( 6 )]
 position = Vector2( 76.8578, 631.719 )
+gravity_vec = Vector2( 0, 0 )
 color = Color( 0.870588, 0.282353, 0.87451, 1 )
 sprite = ExtResource( 7 )
 character_sprite = ExtResource( 8 )
@@ -69,17 +89,34 @@ character_sprite = ExtResource( 8 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Node2D" type="Node2D" parent="CanvasLayer"]
-position = Vector2( 1120, 100 )
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer/Node2D"]
+position = Vector2( 141.693, 579.369 )
+scale = Vector2( 0.490242, 0.490242 )
+texture = ExtResource( 9 )
+vframes = 2
+hframes = 3
+frame = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Node2D/Sprite"]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 1 )
+
+[node name="Sprite2" type="Sprite" parent="CanvasLayer/Node2D"]
+position = Vector2( 600.492, 605.553 )
+scale = Vector2( 0.746984, 0.746984 )
+texture = ExtResource( 10 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Node2D"]
-margin_left = -72.2095
-margin_top = -34.7074
-margin_right = 54.7905
-margin_bottom = 16.2926
-bbcode_enabled = true
-bbcode_text = "[color=yellow][b]Hello[/b][/color]"
-text = "Hello"
+margin_left = 295.0
+margin_top = 547.0
+margin_right = 901.0
+margin_bottom = 656.0
+custom_fonts/normal_font = ExtResource( 11 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "Why are bowler hats so round?"
+scroll_active = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 9 )
+stream = ExtResource( 12 )
 autoplay = true

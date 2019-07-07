@@ -22,7 +22,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 14.8642, 15.4477 )
+extents = Vector2( 12, 12 )
 
 [node name="player" type="KinematicBody2D"]
 position = Vector2( 0, 133.333 )
@@ -42,3 +42,4 @@ anims/player = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
+one_way_collision_margin = 0.0

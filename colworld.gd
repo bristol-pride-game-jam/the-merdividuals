@@ -2,6 +2,7 @@ extends Node2D
 
 var default_color = ColorN("gray")
 
+
 # Controls the background colour for the level
 export var color:Color = default_color setget set_color
 func set_color(value):
