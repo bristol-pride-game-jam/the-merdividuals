@@ -2,6 +2,7 @@ extends Node2D
 
 var default_color = ColorN("gray")
 
+onready var bubble = $SpeachOverlay;
 
 # Controls the background colour for the level
 export var color:Color = default_color setget set_color
@@ -21,11 +22,6 @@ func clearWall(wallName:PoolStringArray=[]):
 	for x in wallName:
 		get_node(x).enabled = false;
 
-# Spacebar - resets current hats
-func _input(event):
-	if (event is InputEventKey and
-		event.pressed and
-		not event.echo and
-		event.scancode == KEY_SPACE):
-			clearWall()
-			set_color(default_color)
+func defaultWalls():
+	clearWall()
+	set_color(default_color)

@@ -32,14 +32,13 @@ func _physics_process(delta):
 		motion += Vector2(1, 0)
 	
 	motion = motion.normalized() * MOTION_SPEED
-	move_and_slide(motion)
+	move_and_slide(motion);
 	
 	if hat != null && Input.is_action_just_pressed("hat_off"):
-		get_parent().add_child(hat)
 		hat.position = position;
 		hat.visible = true
 		hat.collision_mask = 1
 		hat.dropped = true;
-		hat._ready();
 		hat=null;
 		set_sheet(origSheet)
+		get_parent().defaultWalls()

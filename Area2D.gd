@@ -10,8 +10,11 @@ export var color:Color = ColorN("pink");
 export var sprite:Texture setget set_sprite;
 export var character_sprite:Texture;
 export var removes:PoolStringArray;
+export var firstText:String;
+export var firstTexture:Texture;
 
 var dropped = false;
+var first = true;
 
 func set_sprite(value):
 	sprite = value
@@ -33,6 +36,10 @@ func _on_Area2D_body_entered(body):
 	self.visible = false
 	self.collision_mask = 0
 	$PickupSound.play(0)
+	
+	if (first):
+		first = false;
+		get_node("/root/colworld/SpeachOverlay").show(firstText,firstTexture);
 	
 
 func _on_Hat_body_exited(body):
