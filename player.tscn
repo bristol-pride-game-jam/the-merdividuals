@@ -1,8 +1,61 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://player.gd" type="Script" id=1]
 [ext_resource path="res://merd.png" type="Texture" id=2]
 [ext_resource path="res://sprite.gd" type="Script" id=3]
+
+[sub_resource type="Animation" id=3]
+resource_name = "idle"
+length = 0.8
+loop = true
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 8, 9, 10, 11 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "idle_rare"
+length = 0.8
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 4, 5, 6, 7 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "left"
+length = 0.6
+loop = true
+step = 0.15
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 12, 13, 14, 15 ]
+}
 
 [sub_resource type="Animation" id=1]
 resource_name = "player"
@@ -21,6 +74,24 @@ tracks/0/keys = {
 "values": [ 4, 5, 6, 7, 8, 9, 10, 11 ]
 }
 
+[sub_resource type="Animation" id=6]
+resource_name = "right"
+length = 0.6
+loop = true
+step = 0.15
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 14.8642, 15.4477 )
 
@@ -34,11 +105,15 @@ texture = ExtResource( 2 )
 offset = Vector2( 0, -4 )
 vframes = 4
 hframes = 4
-frame = 9
+frame = 7
 script = ExtResource( 3 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="sprite"]
+anims/idle = SubResource( 3 )
+anims/idle_rare = SubResource( 4 )
+anims/left = SubResource( 5 )
 anims/player = SubResource( 1 )
+anims/right = SubResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
