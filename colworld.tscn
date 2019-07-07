@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://colworld.gd" type="Script" id=1]
 [ext_resource path="res://TileSet.tres" type="TileSet" id=2]
@@ -13,15 +13,19 @@
 [ext_resource path="res://bowler/bowler6.png" type="Texture" id=11]
 [ext_resource path="res://hat_cat_ears.png" type="Texture" id=12]
 [ext_resource path="res://merd_ears.png" type="Texture" id=13]
-[ext_resource path="res://Merdividual.wav" type="AudioStream" id=14]
-[ext_resource path="res://Seeweed.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Seaweed.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Jellyfish.tscn" type="PackedScene" id=17]
-[ext_resource path="res://island.png" type="Texture" id=18]
-[ext_resource path="res://Waves.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Tree.tscn" type="PackedScene" id=20]
-[ext_resource path="res://player.tscn" type="PackedScene" id=21]
-[ext_resource path="res://TextHUDBubbles.tscn" type="PackedScene" id=22]
+[ext_resource path="res://cat/cat1.png" type="Texture" id=14]
+[ext_resource path="res://cat/cat2.png" type="Texture" id=15]
+[ext_resource path="res://cat/cat3.png" type="Texture" id=16]
+[ext_resource path="res://cat/cat4.png" type="Texture" id=17]
+[ext_resource path="res://Merdividual.wav" type="AudioStream" id=18]
+[ext_resource path="res://Seeweed.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Seaweed.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Jellyfish.tscn" type="PackedScene" id=21]
+[ext_resource path="res://island.png" type="Texture" id=22]
+[ext_resource path="res://Waves.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Tree.tscn" type="PackedScene" id=24]
+[ext_resource path="res://player.tscn" type="PackedScene" id=25]
+[ext_resource path="res://TextHUDBubbles.tscn" type="PackedScene" id=26]
 
 [sub_resource type="AnimatedTexture" id=1]
 flags = 4
@@ -38,6 +42,18 @@ frame_4/texture = ExtResource( 10 )
 frame_4/delay_sec = 0.1
 frame_5/texture = ExtResource( 11 )
 frame_5/delay_sec = 0.1
+
+[sub_resource type="AnimatedTexture" id=2]
+flags = 4
+frames = 4
+frame_0/texture = ExtResource( 14 )
+frame_0/delay_sec = 0.1
+frame_1/texture = ExtResource( 15 )
+frame_1/delay_sec = 0.1
+frame_2/texture = ExtResource( 16 )
+frame_2/delay_sec = 0.1
+frame_3/texture = ExtResource( 17 )
+frame_3/delay_sec = 0.1
 
 [node name="colworld" type="Node2D"]
 show_behind_parent = true
@@ -85,7 +101,7 @@ position = Vector2( 103.13, 77.3474 )
 gravity_vec = Vector2( 0, 0 )
 color = Color( 0.0745098, 0.160784, 0.721569, 1 )
 removes = PoolStringArray( "MaleWalls" )
-firstText = ""
+firstText = "I hope no one sees me..."
 firstTexture = SubResource( 1 )
 
 [node name="CatEars" parent="." instance=ExtResource( 5 )]
@@ -94,662 +110,663 @@ color = Color( 0.870588, 0.282353, 0.87451, 1 )
 sprite = ExtResource( 12 )
 character_sprite = ExtResource( 13 )
 removes = PoolStringArray( "FemaleWalls" )
-firstText = ""
+firstText = "I-I I'm so embarassed..."
+firstTexture = SubResource( 2 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 14 )
+stream = ExtResource( 18 )
 autoplay = true
 
 [node name="AnimatedTiles" type="Node" parent="."]
 editor/display_folded = true
 
-[node name="Seeweed" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( -64.5013, -181.677 )
 
-[node name="Seeweed3" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed3" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 124.713, -148.774 )
 
-[node name="Seeweed2" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed2" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 84.6429, -146.711 )
 
-[node name="Seeweed7" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed7" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( -56.0817, -182.153 )
 
-[node name="Seeweed8" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed8" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( -22.7247, -181.11 )
 
-[node name="Seeweed9" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed9" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( -0.834259, -195.704 )
 
-[node name="Seeweed4" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed4" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 94.0245, -126.905 )
 
-[node name="Seeweed6" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed6" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 86.7277, -163.389 )
 
-[node name="Seeweed5" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed5" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 99.2365, -161.305 )
 
-[node name="Seeweed10" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed10" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 90.8973, -152.965 )
 
-[node name="Seeweed11" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed11" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 275.403, -242.612 )
 
-[node name="Seeweed12" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed12" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 358.795, -261.375 )
 
-[node name="Seeweed13" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed13" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 293.124, -241.57 )
 
-[node name="Seeweed14" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed14" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 115.915, -157.135 )
 
-[node name="Seeweed15" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed15" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( -37.3183, -179.025 )
 
-[node name="Seeweed16" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed16" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( -97.7778, -210.298 )
 
-[node name="Seeweed17" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed17" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 76.3037, -131.075 )
 
-[node name="Seeweed18" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed18" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 78.3885, -171.729 )
 
-[node name="Seeweed19" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed19" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 139.89, -195.704 )
 
-[node name="Seeweed20" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed20" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( -71.7177, -290.563 )
 
-[node name="Seeweed21" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed21" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 109.169, -127.683 )
 
-[node name="Seeweed22" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed22" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( -138.834, -15.5497 )
 
-[node name="Seeweed23" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed23" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( -116.735, -2.45387 )
 
-[node name="Seeweed24" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed24" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( -137.197, 4.09406 )
 
-[node name="Seeweed25" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed25" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( -126.557, -9.0018 )
 
-[node name="Seeweed26" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed26" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( -157.659, 8.18651 )
 
-[node name="Seeweed27" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed27" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( -157.659, -39.286 )
 
-[node name="Seeweed28" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed28" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( -149.474, -54.0188 )
 
-[node name="Seeweed29" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed29" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( -20.9713, -200.529 )
 
-[node name="Seeweed30" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed30" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( -47.163, -187.433 )
 
-[node name="Seeweed31" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed31" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( -61.8958, -206.258 )
 
-[node name="Seeweed32" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed32" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( -14.4234, -189.888 )
 
-[node name="Seeweed33" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed33" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 317.884, -250.457 )
 
-[node name="Seeweed34" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed34" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 76.4291, -185.796 )
 
-[node name="Seeweed35" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed35" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 131.268, -180.885 )
 
-[node name="Seeweed36" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed36" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 190.199, 98.2205 )
 
-[node name="Seeweed37" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed37" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 187.744, 124.412 )
 
-[node name="Seeweed38" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed38" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 197.566, 112.135 )
 
-[node name="Seeweed39" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed39" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 222.939, 123.594 )
 
-[node name="Seeweed40" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed40" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 222.121, 99.039 )
 
-[node name="Seeweed41" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed41" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 242.583, 119.501 )
 
-[node name="Seeweed42" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed42" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( -129.012, 45.8371 )
 
-[node name="Seeweed43" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed43" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( -145.382, 28.6488 )
 
-[node name="Seeweed44" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed44" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 464.394, 69.5733 )
 
-[node name="Seeweed45" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed45" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 484.856, 53.2035 )
 
-[node name="Seeweed46" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed46" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 464.394, 98.2205 )
 
-[node name="Seeweed47" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed47" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 525.781, 87.5801 )
 
-[node name="Seeweed48" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed48" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 502.044, 82.6692 )
 
-[node name="Seeweed49" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed49" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 506.955, 58.1145 )
 
-[node name="Seeweed50" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed50" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 372.723, 113.772 )
 
-[node name="Seeweed51" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed51" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 393.185, 134.234 )
 
-[node name="Seeweed52" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed52" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 429.199, 112.953 )
 
-[node name="Seeweed53" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed53" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 438.202, 121.957 )
 
-[node name="Seeweed54" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed54" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 464.394, -222.628 )
 
-[node name="Seeweed55" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed55" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 479.127, -207.077 )
 
-[node name="Seeweed56" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed56" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 472.579, -228.357 )
 
-[node name="Seeweed57" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed57" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 505.318, -195.618 )
 
-[node name="Seeweed58" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed58" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 491.404, -211.169 )
 
-[node name="Seeweed65" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed65" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 412.01, -317.573 )
 
-[node name="Seeweed72" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed72" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 695.208, -222.628 )
 
-[node name="Seeweed79" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed79" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 691.116, -172.7 )
 
-[node name="Seeweed59" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed59" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 519.233, -212.806 )
 
-[node name="Seeweed71" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed71" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 439.839, -319.21 )
 
-[node name="Seeweed77" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed77" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 723.037, -224.265 )
 
-[node name="Seeweed80" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed80" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 718.944, -174.337 )
 
-[node name="Seeweed60" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed60" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 506.137, -225.902 )
 
-[node name="Seeweed70" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed70" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 426.743, -332.306 )
 
-[node name="Seeweed76" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed76" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 709.941, -237.361 )
 
-[node name="Seeweed84" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed84" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 705.849, -187.433 )
 
-[node name="Seeweed61" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed61" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 485.675, -266.008 )
 
-[node name="Seeweed66" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed66" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 406.281, -372.412 )
 
-[node name="Seeweed86" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed86" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 755.777, 92.4911 )
 
-[node name="Seeweed87" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed87" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 777.057, 85.9431 )
 
-[node name="Seeweed88" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed88" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 775.42, 123.594 )
 
-[node name="Seeweed89" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed89" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 754.958, 115.409 )
 
-[node name="Seeweed90" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed90" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 795.064, 104.768 )
 
-[node name="Seeweed94" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed94" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 1015.24, 9.005 )
 
-[node name="Seeweed95" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed95" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 1037.34, 1.63858 )
 
-[node name="Seeweed96" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed96" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 1029.97, -22.9161 )
 
-[node name="Seeweed97" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed97" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 1064.35, 2.45708 )
 
-[node name="Seeweed98" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed98" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 1003.78, 31.1043 )
 
-[node name="Seeweed99" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed99" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 1019.33, 49.1111 )
 
-[node name="Seeweed100" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed100" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 983.317, 47.4741 )
 
-[node name="Seeweed101" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed101" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 1044.7, -65.4776 )
 
-[node name="Seeweed102" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed102" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 1067.62, -64.6591 )
 
-[node name="Seeweed103" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed103" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 1047.16, -81.029 )
 
-[node name="Seeweed104" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed104" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 1084.81, -101.491 )
 
-[node name="Seeweed105" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed105" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 1060.25, -103.947 )
 
-[node name="Seeweed106" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed106" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 817.981, -175.974 )
 
-[node name="Seeweed107" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed107" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 854.813, -180.066 )
 
-[node name="Seeweed108" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed108" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 779.512, -179.248 )
 
-[node name="Seeweed109" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed109" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 802.43, -193.981 )
 
-[node name="Seeweed110" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed110" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 812.252, -181.703 )
 
-[node name="Seeweed111" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed111" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 733.677, -130.138 )
 
-[node name="Seeweed112" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed112" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 879.368, -179.248 )
 
-[node name="Seeweed113" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed113" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 918.656, -160.423 )
 
-[node name="Seeweed114" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed114" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 1013.6, -96.5803 )
 
-[node name="Seeweed115" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed115" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 1053.71, -122.772 )
 
-[node name="Seeweed91" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed91" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 763.143, 143.237 )
 
-[node name="Seeweed92" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed92" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 779.513, 68.7549 )
 
-[node name="Seeweed93" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed93" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 804.067, 122.775 )
 
-[node name="Seeweed78" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed78" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 689.479, -277.467 )
 
-[node name="Seeweed81" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed81" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 685.386, -227.539 )
 
-[node name="Seeweed62" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed62" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 515.14, -242.272 )
 
-[node name="Seeweed69" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed69" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 435.747, -348.675 )
 
-[node name="Seeweed74" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed74" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 718.945, -253.731 )
 
-[node name="Seeweed82" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed82" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 714.852, -203.803 )
 
-[node name="Seeweed63" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed63" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 493.041, -241.453 )
 
-[node name="Seeweed68" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed68" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 413.647, -347.857 )
 
-[node name="Seeweed73" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed73" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 696.845, -252.912 )
 
-[node name="Seeweed85" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed85" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 692.753, -202.984 )
 
-[node name="Seeweed64" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed64" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 472.579, -249.638 )
 
-[node name="Seeweed67" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed67" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 393.185, -356.042 )
 
-[node name="Seeweed75" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed75" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 676.383, -261.097 )
 
-[node name="Seeweed83" parent="AnimatedTiles" instance=ExtResource( 15 )]
+[node name="Seeweed83" parent="AnimatedTiles" instance=ExtResource( 19 )]
 position = Vector2( 672.291, -211.169 )
 
-[node name="Seaweed" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 177.892, 122.861 )
 
-[node name="Seaweed11" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed11" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 309.594, -241.838 )
 
-[node name="Seaweed9" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed9" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( -43.781, -180.336 )
 
-[node name="Seaweed12" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed12" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 76.0955, -151.149 )
 
-[node name="Seaweed13" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed13" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 78.1803, -123.004 )
 
-[node name="Seaweed10" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed10" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 100.071, -123.004 )
 
-[node name="Seaweed7" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed7" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 11.4664, -197.014 )
 
-[node name="Seaweed17" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed17" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 480.462, -233.028 )
 
-[node name="Seaweed21" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed21" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 706.365, -220.751 )
 
-[node name="Seaweed22" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed22" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 698.18, -185.556 )
 
-[node name="Seaweed23" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed23" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 673.625, -222.388 )
 
-[node name="Seaweed24" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed24" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 712.913, -151.179 )
 
-[node name="Seaweed25" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed25" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 691.632, -256.764 )
 
-[node name="Seaweed26" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed26" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 477.188, 72.2691 )
 
-[node name="Seaweed27" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed27" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 514.02, 98.4608 )
 
-[node name="Seaweed38" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed38" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 779.211, 138.567 )
 
-[node name="Seaweed39" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed39" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 765.296, 81.2725 )
 
-[node name="Seaweed40" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed40" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 784.122, 112.375 )
 
-[node name="Seaweed41" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed41" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 752.2, 138.567 )
 
-[node name="Seaweed42" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed42" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 1052.59, -79.9702 )
 
-[node name="Seaweed46" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed46" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 805.402, -177.371 )
 
-[node name="Seaweed50" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed50" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 1006.75, 41.985 )
 
-[node name="Seaweed54" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed54" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 1071.41, -99.614 )
 
-[node name="Seaweed43" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed43" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 1033.76, -98.7954 )
 
-[node name="Seaweed49" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed49" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 786.577, -196.196 )
 
-[node name="Seaweed53" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed53" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 987.926, 23.1597 )
 
-[node name="Seaweed57" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed57" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 1052.59, -118.439 )
 
-[node name="Seaweed44" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed44" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 1066.5, -99.6139 )
 
-[node name="Seaweed47" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed47" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 819.317, -197.014 )
 
-[node name="Seaweed51" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed51" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 1020.67, 22.3412 )
 
-[node name="Seaweed55" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed55" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 1085.33, -119.258 )
 
-[node name="Seaweed45" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed45" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 1038.67, -79.1517 )
 
-[node name="Seaweed48" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed48" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 791.488, -176.552 )
 
-[node name="Seaweed52" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed52" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 992.837, 42.8034 )
 
-[node name="Seaweed56" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed56" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 1057.5, -98.7955 )
 
-[node name="Seaweed28" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed28" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 481.28, 101.735 )
 
-[node name="Seaweed29" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed29" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 389.609, 113.194 )
 
-[node name="Seaweed30" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed30" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 208.723, 115.649 )
 
-[node name="Seaweed31" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed31" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 234.096, 123.834 )
 
-[node name="Seaweed32" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed32" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 442.811, 97.6423 )
 
-[node name="Seaweed33" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed33" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 500.924, 50.1698 )
 
-[node name="Seaweed34" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed34" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( -129.314, 26.4336 )
 
-[node name="Seaweed35" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed35" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( -111.307, -12.0355 )
 
-[node name="Seaweed36" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed36" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( -153.869, -7.94304 )
 
-[node name="Seaweed37" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed37" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( -127.677, -23.4944 )
 
-[node name="Seaweed8" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed8" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( -72.9683, -198.057 )
 
-[node name="Seaweed14" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed14" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 318.27, -264.355 )
 
-[node name="Seaweed2" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed2" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 83.3923, -127.173 )
 
-[node name="Seaweed15" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed15" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 474.631, -193.471 )
 
-[node name="Seaweed6" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed6" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 86.5195, -182.421 )
 
-[node name="Seaweed20" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed20" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 477.758, -248.719 )
 
-[node name="Seaweed4" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed4" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 95.9012, -143.852 )
 
-[node name="Seaweed16" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed16" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 487.14, -210.15 )
 
-[node name="Seaweed5" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed5" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 126.131, -165.742 )
 
-[node name="Seaweed18" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed18" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 517.369, -232.04 )
 
-[node name="Seaweed3" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed3" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 110.495, -148.021 )
 
-[node name="Seaweed19" parent="AnimatedTiles" instance=ExtResource( 16 )]
+[node name="Seaweed19" parent="AnimatedTiles" instance=ExtResource( 20 )]
 position = Vector2( 501.733, -214.319 )
 
-[node name="Jellyfish" parent="AnimatedTiles" instance=ExtResource( 17 )]
+[node name="Jellyfish" parent="AnimatedTiles" instance=ExtResource( 21 )]
 position = Vector2( -58.6548, -234.672 )
 
-[node name="Jellyfish5" parent="AnimatedTiles" instance=ExtResource( 17 )]
+[node name="Jellyfish5" parent="AnimatedTiles" instance=ExtResource( 21 )]
 position = Vector2( 301.481, -247.768 )
 
-[node name="Jellyfish6" parent="AnimatedTiles" instance=ExtResource( 17 )]
+[node name="Jellyfish6" parent="AnimatedTiles" instance=ExtResource( 21 )]
 position = Vector2( 200.807, 98.4535 )
 
-[node name="Jellyfish7" parent="AnimatedTiles" instance=ExtResource( 17 )]
+[node name="Jellyfish7" parent="AnimatedTiles" instance=ExtResource( 21 )]
 position = Vector2( 229.454, 118.916 )
 
-[node name="Jellyfish8" parent="AnimatedTiles" instance=ExtResource( 17 )]
+[node name="Jellyfish8" parent="AnimatedTiles" instance=ExtResource( 21 )]
 position = Vector2( 93.5844, 171.299 )
 
-[node name="Jellyfish9" parent="AnimatedTiles" instance=ExtResource( 17 )]
+[node name="Jellyfish9" parent="AnimatedTiles" instance=ExtResource( 21 )]
 position = Vector2( 379.238, 118.097 )
 
-[node name="Jellyfish10" parent="AnimatedTiles" instance=ExtResource( 17 )]
+[node name="Jellyfish10" parent="AnimatedTiles" instance=ExtResource( 21 )]
 position = Vector2( 502.83, 123.827 )
 
-[node name="Jellyfish11" parent="AnimatedTiles" instance=ExtResource( 17 )]
+[node name="Jellyfish11" parent="AnimatedTiles" instance=ExtResource( 21 )]
 position = Vector2( 515.107, 114.823 )
 
-[node name="Jellyfish12" parent="AnimatedTiles" instance=ExtResource( 17 )]
+[node name="Jellyfish12" parent="AnimatedTiles" instance=ExtResource( 21 )]
 position = Vector2( 492.189, 64.0769 )
 
-[node name="Jellyfish13" parent="AnimatedTiles" instance=ExtResource( 17 )]
+[node name="Jellyfish13" parent="AnimatedTiles" instance=ExtResource( 21 )]
 position = Vector2( 614.963, -321.432 )
 
-[node name="Jellyfish14" parent="AnimatedTiles" instance=ExtResource( 17 )]
+[node name="Jellyfish14" parent="AnimatedTiles" instance=ExtResource( 21 )]
 position = Vector2( 734.463, -317.34 )
 
-[node name="Jellyfish15" parent="AnimatedTiles" instance=ExtResource( 17 )]
+[node name="Jellyfish15" parent="AnimatedTiles" instance=ExtResource( 21 )]
 position = Vector2( 699.268, -210.936 )
 
-[node name="Jellyfish16" parent="AnimatedTiles" instance=ExtResource( 17 )]
+[node name="Jellyfish16" parent="AnimatedTiles" instance=ExtResource( 21 )]
 position = Vector2( 379.238, -448.298 )
 
-[node name="Jellyfish17" parent="AnimatedTiles" instance=ExtResource( 17 )]
+[node name="Jellyfish17" parent="AnimatedTiles" instance=ExtResource( 21 )]
 position = Vector2( 447.173, -477.764 )
 
-[node name="Jellyfish18" parent="AnimatedTiles" instance=ExtResource( 17 )]
+[node name="Jellyfish18" parent="AnimatedTiles" instance=ExtResource( 21 )]
 position = Vector2( 745.103, -153.642 )
 
-[node name="Jellyfish19" parent="AnimatedTiles" instance=ExtResource( 17 )]
+[node name="Jellyfish19" parent="AnimatedTiles" instance=ExtResource( 21 )]
 position = Vector2( 898.979, -216.665 )
 
-[node name="Jellyfish20" parent="AnimatedTiles" instance=ExtResource( 17 )]
+[node name="Jellyfish20" parent="AnimatedTiles" instance=ExtResource( 21 )]
 position = Vector2( 986.558, -156.916 )
 
-[node name="Jellyfish21" parent="AnimatedTiles" instance=ExtResource( 17 )]
+[node name="Jellyfish21" parent="AnimatedTiles" instance=ExtResource( 21 )]
 position = Vector2( 1031.57, -175.741 )
 
-[node name="Jellyfish22" parent="AnimatedTiles" instance=ExtResource( 17 )]
+[node name="Jellyfish22" parent="AnimatedTiles" instance=ExtResource( 21 )]
 position = Vector2( 1081.5, 6.78253 )
 
-[node name="Jellyfish23" parent="AnimatedTiles" instance=ExtResource( 17 )]
+[node name="Jellyfish23" parent="AnimatedTiles" instance=ExtResource( 21 )]
 position = Vector2( 1214.1, -100.44 )
 
-[node name="Jellyfish2" parent="AnimatedTiles" instance=ExtResource( 17 )]
+[node name="Jellyfish2" parent="AnimatedTiles" instance=ExtResource( 21 )]
 position = Vector2( -36.7643, -203.4 )
 
-[node name="Jellyfish3" parent="AnimatedTiles" instance=ExtResource( 17 )]
+[node name="Jellyfish3" parent="AnimatedTiles" instance=ExtResource( 21 )]
 position = Vector2( 285.339, -257.605 )
 
-[node name="Jellyfish4" parent="AnimatedTiles" instance=ExtResource( 17 )]
+[node name="Jellyfish4" parent="AnimatedTiles" instance=ExtResource( 21 )]
 position = Vector2( -177.489, -59.5483 )
 
 [node name="Sprite" type="Sprite" parent="AnimatedTiles"]
 position = Vector2( 855, -71 )
-texture = ExtResource( 18 )
+texture = ExtResource( 22 )
 
-[node name="Waves" parent="AnimatedTiles" instance=ExtResource( 19 )]
+[node name="Waves" parent="AnimatedTiles" instance=ExtResource( 23 )]
 position = Vector2( 707, -46 )
 
-[node name="Waves7" parent="AnimatedTiles" instance=ExtResource( 19 )]
+[node name="Waves7" parent="AnimatedTiles" instance=ExtResource( 23 )]
 position = Vector2( 803, -46 )
 
-[node name="Waves16" parent="AnimatedTiles" instance=ExtResource( 19 )]
+[node name="Waves16" parent="AnimatedTiles" instance=ExtResource( 23 )]
 position = Vector2( 899, -46 )
 
-[node name="Waves2" parent="AnimatedTiles" instance=ExtResource( 19 )]
+[node name="Waves2" parent="AnimatedTiles" instance=ExtResource( 23 )]
 position = Vector2( 723, -46 )
 
-[node name="Waves8" parent="AnimatedTiles" instance=ExtResource( 19 )]
+[node name="Waves8" parent="AnimatedTiles" instance=ExtResource( 23 )]
 position = Vector2( 819, -46 )
 
-[node name="Waves17" parent="AnimatedTiles" instance=ExtResource( 19 )]
+[node name="Waves17" parent="AnimatedTiles" instance=ExtResource( 23 )]
 position = Vector2( 915, -46 )
 
-[node name="Waves3" parent="AnimatedTiles" instance=ExtResource( 19 )]
+[node name="Waves3" parent="AnimatedTiles" instance=ExtResource( 23 )]
 position = Vector2( 739, -46 )
 
-[node name="Waves10" parent="AnimatedTiles" instance=ExtResource( 19 )]
+[node name="Waves10" parent="AnimatedTiles" instance=ExtResource( 23 )]
 position = Vector2( 835, -46 )
 
-[node name="Waves15" parent="AnimatedTiles" instance=ExtResource( 19 )]
+[node name="Waves15" parent="AnimatedTiles" instance=ExtResource( 23 )]
 position = Vector2( 931, -46 )
 
-[node name="Waves4" parent="AnimatedTiles" instance=ExtResource( 19 )]
+[node name="Waves4" parent="AnimatedTiles" instance=ExtResource( 23 )]
 position = Vector2( 755, -46 )
 
-[node name="Waves11" parent="AnimatedTiles" instance=ExtResource( 19 )]
+[node name="Waves11" parent="AnimatedTiles" instance=ExtResource( 23 )]
 position = Vector2( 851, -46 )
 
-[node name="Waves13" parent="AnimatedTiles" instance=ExtResource( 19 )]
+[node name="Waves13" parent="AnimatedTiles" instance=ExtResource( 23 )]
 position = Vector2( 947, -46 )
 
-[node name="Waves5" parent="AnimatedTiles" instance=ExtResource( 19 )]
+[node name="Waves5" parent="AnimatedTiles" instance=ExtResource( 23 )]
 position = Vector2( 771, -46 )
 
-[node name="Waves12" parent="AnimatedTiles" instance=ExtResource( 19 )]
+[node name="Waves12" parent="AnimatedTiles" instance=ExtResource( 23 )]
 position = Vector2( 867, -46 )
 
-[node name="Waves14" parent="AnimatedTiles" instance=ExtResource( 19 )]
+[node name="Waves14" parent="AnimatedTiles" instance=ExtResource( 23 )]
 position = Vector2( 963, -46 )
 
-[node name="Waves6" parent="AnimatedTiles" instance=ExtResource( 19 )]
+[node name="Waves6" parent="AnimatedTiles" instance=ExtResource( 23 )]
 position = Vector2( 787, -46 )
 
-[node name="Waves9" parent="AnimatedTiles" instance=ExtResource( 19 )]
+[node name="Waves9" parent="AnimatedTiles" instance=ExtResource( 23 )]
 position = Vector2( 883, -46 )
 
-[node name="Waves18" parent="AnimatedTiles" instance=ExtResource( 19 )]
+[node name="Waves18" parent="AnimatedTiles" instance=ExtResource( 23 )]
 position = Vector2( 979, -46 )
 
-[node name="Tree" parent="AnimatedTiles" instance=ExtResource( 20 )]
+[node name="Tree" parent="AnimatedTiles" instance=ExtResource( 24 )]
 position = Vector2( 841, -68 )
 
-[node name="player" parent="." instance=ExtResource( 21 )]
+[node name="player" parent="." instance=ExtResource( 25 )]
 position = Vector2( -49.1358, -71.7074 )
 
 [node name="Camera2D" type="Camera2D" parent="player"]
@@ -760,5 +777,5 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="SpeachOverlay" parent="." instance=ExtResource( 22 )]
+[node name="SpeachOverlay" parent="." instance=ExtResource( 26 )]
 pause_mode = 2
