@@ -13,12 +13,12 @@ func _ready():
 
 # Enables all walls except the specified wall
 # If none are specified then none are disabled
-func clearWall(wallName=null):
+func clearWall(wallName:PoolStringArray=[]):
 	for x in get_children():
 		if x is togglable_wall:
 			x.enabled = true
-	if wallName != null:
-		get_node(wallName).enabled = false;
+	for x in wallName:
+		get_node(x).enabled = false;
 
 # Spacebar - resets current hats
 func _input(event):

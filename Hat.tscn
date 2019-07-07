@@ -12,7 +12,7 @@ script = ExtResource( 1 )
 color = Color( 1, 0.75, 0.8, 1 )
 sprite = ExtResource( 2 )
 character_sprite = ExtResource( 3 )
-removes = ""
+removes = PoolStringArray(  )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )

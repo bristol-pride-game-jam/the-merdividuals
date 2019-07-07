@@ -9,7 +9,7 @@ onready var world = get_node("..");
 export var color:Color = ColorN("pink");
 export var sprite:Texture setget set_sprite;
 export var character_sprite:Texture;
-export var removes:String;
+export var removes:PoolStringArray;
 
 var dropped = false;
 
