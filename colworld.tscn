@@ -58,6 +58,7 @@ __meta__ = {
 position = Vector2( -41.1463, -356.799 )
 gravity_vec = Vector2( 0, 0 )
 color = Color( 0.0745098, 0.160784, 0.721569, 1 )
+removes = PoolStringArray( "MaleWalls" )
 
 [node name="CatEars" parent="." instance=ExtResource( 6 )]
 position = Vector2( 76.8578, 631.719 )
