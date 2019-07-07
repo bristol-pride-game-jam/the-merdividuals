@@ -1,6 +1,6 @@
 extends Node2D
 
-var default_color = ColorN("gray")
+var default_color = Color(179, 250, 1)
 
 onready var bubble = $SpeachOverlay;
 
