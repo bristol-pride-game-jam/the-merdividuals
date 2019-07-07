@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://colworld.gd" type="Script" id=1]
 [ext_resource path="res://TileSet.tres" type="TileSet" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Hat.tscn" type="PackedScene" id=6]
 [ext_resource path="res://hat_cat_ears.png" type="Texture" id=7]
 [ext_resource path="res://merd_ears.png" type="Texture" id=8]
+[ext_resource path="res://Merdividual.wav" type="AudioStream" id=9]
 
 [node name="colworld" type="Node2D"]
 show_behind_parent = true
@@ -77,3 +78,6 @@ margin_bottom = 16.2926
 bbcode_enabled = true
 bbcode_text = "[color=yellow][b]Hello[/b][/color]"
 text = "Hello"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
