@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://colworld.gd" type="Script" id=1]
 [ext_resource path="res://TileSet.tres" type="TileSet" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Hat.tscn" type="PackedScene" id=5]
 [ext_resource path="res://hat_cat_ears.png" type="Texture" id=6]
 [ext_resource path="res://merd_ears.png" type="Texture" id=7]
+[ext_resource path="res://Merdividual.wav" type="AudioStream" id=8]
 
 [node name="colworld" type="Node2D"]
 show_behind_parent = true
@@ -56,11 +57,15 @@ __meta__ = {
 position = Vector2( 133.449, -676.251 )
 gravity_vec = Vector2( 0, 0 )
 color = Color( 0.0745098, 0.160784, 0.721569, 1 )
-removes = "MaleWalls"
+removes = PoolStringArray( "MalesWalls" )
 
 [node name="CatEars" parent="." instance=ExtResource( 5 )]
 position = Vector2( -5.164, 142.323 )
 color = Color( 0.870588, 0.282353, 0.87451, 1 )
 sprite = ExtResource( 6 )
 character_sprite = ExtResource( 7 )
-removes = "FemaleWalls"
+removes = PoolStringArray( "FemaleWalls" )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+autoplay = true

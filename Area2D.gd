@@ -32,6 +32,7 @@ func _on_Area2D_body_entered(body):
 	body.hat = self
 	self.visible = false
 	self.collision_mask = 0
+	$PickupSound.play(0)
 	
 
 func _on_Hat_body_exited(body):

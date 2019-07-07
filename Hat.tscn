@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Area2D.gd" type="Script" id=1]
 [ext_resource path="res://hat_bowler.png" type="Texture" id=2]
 [ext_resource path="res://merd_hat.png" type="Texture" id=3]
+[ext_resource path="res://pickup.ogg" type="AudioStream" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 12.0
@@ -20,5 +21,8 @@ shape = SubResource( 1 )
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0.333336, 0.592594 )
 texture = ExtResource( 2 )
+
+[node name="PickupSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
 [connection signal="body_entered" from="." to="." method="_on_Hat_body_entered" flags=3]
 [connection signal="body_exited" from="." to="." method="_on_Hat_body_exited"]
