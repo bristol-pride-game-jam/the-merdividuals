@@ -8,7 +8,8 @@ extends Sprite
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$AnimationPlayer.play("player")
+	$AnimationPlayer.play("idle")
+	$AnimationPlayer.advance(randi() % 100 / 500)
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

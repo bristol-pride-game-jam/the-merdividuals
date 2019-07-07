@@ -23,5 +23,5 @@ func clearWall(wallName:PoolStringArray=[]):
 		get_node(x).enabled = false;
 
 func defaultWalls():
-	clearWall()
+	clearWall(["AgenderWalls"])
 	set_color(default_color)
