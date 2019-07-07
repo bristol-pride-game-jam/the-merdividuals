@@ -57,4 +57,4 @@ func _physics_process(delta):
 		hat.dropped = true;
 		hat=null;
 		set_sheet(origSheet)
-		get_parent().defaultWalls()
+		get_parent().get_parent().defaultWalls()
